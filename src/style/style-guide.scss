@@ -1,0 +1,45 @@
+// don't need to include at project
+#style-guide {
+  aside {
+    border-right: 1px solid rgba(#333, $alpha: 0.3);
+    min-height: 100vh;
+    .brand {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #333;
+      padding: 15px 0;
+      margin-bottom: 0;
+      img {
+        width: 80px;
+        margin-right: 15px;
+      }
+      figcaption {
+        font-size: 18px;
+      }
+    }
+    .guide-list {
+      padding-left: 0;
+      li {
+        list-style: none;
+        padding: 15px;
+        border-bottom: 1px solid rgba(#333, $alpha: 0.3);
+        cursor: pointer;
+        &.active {
+          background: rgba(#333, $alpha: 0.5);
+        }
+        &:hover {
+          background: rgba($color: #000000, $alpha: 0.3);
+        }
+      }
+    }
+  }
+  .collector {
+    .component {
+      display: none;
+      padding-top: 15px;
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

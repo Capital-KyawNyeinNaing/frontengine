@@ -1,0 +1,15 @@
+// color variables
+$colors: (
+  primary: #F06F2D,
+  secondary: #74BEF6,
+  tertiary: #F18484
+);
+
+@each $color, $code in $colors {
+  .#{$color} {
+    background: $code!important;
+  }
+  .text-#{$color} {
+    color: $code!important;
+  }
+}

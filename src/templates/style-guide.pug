@@ -1,0 +1,38 @@
+include ./mixin/_mixin.pug
+<!DOCTYPE html>
+html(lang="en")
+  head
+    title Document
+    - meta = {}
+    - meta.logo = "./assets/images/utils/YATANARPON PAN.png"
+    - meta.keywords = "testing"
+    - meta.css = ["./plugin/plugin.min.css", "./style/style-guide.css", "./style/style.css"]
+    + getMeta(meta)
+  body#style-guide
+    main.container-fluid
+      article.row
+        aside.col-2
+          figure.brand
+            img(src=meta.logo, alt="Myanmar Fisca Style Guide")
+            figcaption Style Guide
+          ul.guide-list
+            li.active(data-target='color') Color
+            li(data-target='typo') Typo Graphy
+            li(data-target='card') Card
+            li(data-target='button') Button
+            li(data-target='form') Form
+        section.col-10.collector
+          .component.active(data='color')
+            h2 Color
+            hr 
+            
+          .component(data='typo')
+            h2 Typo
+          .component(data='card')
+            h2 Card
+          .component(data='button')
+            h2 Button
+          .component(data='form')
+            h2 Form
+  
+    script(src="./js/style-guide.js")

@@ -1,0 +1,13 @@
+node_modules
+assets/images
+dist
+
+yarn.lock
+
+# local env files
+.env
+.env.development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

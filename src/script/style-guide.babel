@@ -1,0 +1,13 @@
+let list = document.querySelectorAll('.guide-list li')
+for(let i=0; i<list.length; i++) {
+    list[i].addEventListener('click', function() {
+        let component = document.querySelectorAll('.component')
+        for(let z=0; z<component.length; z++) {
+            component[z].classList.remove('active')
+            list[z].classList.remove('active')
+        }
+        this.classList.add('active')
+        let target = this.getAttribute('data-target')
+        document.querySelector(`.component[data=${target}]`).classList.add('active')
+    })
+}
